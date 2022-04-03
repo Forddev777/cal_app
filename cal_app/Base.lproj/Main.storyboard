@@ -53,6 +53,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="ntE-Jp-BiP"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="HeightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0LC-RI-ikc"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="285" translatesAutoresizingMaskIntoConstraints="NO" id="2yC-k1-Mdx">
                                         <rect key="frame" x="0.0" y="696" width="388" height="21"/>
@@ -74,11 +77,14 @@
                                             <constraint firstAttribute="height" constant="21" id="rzH-fw-5BR"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-jM-wH3">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-jM-wH3">
                                         <rect key="frame" x="-2" y="727" width="392" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="8pT-vQ-4Ag"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="WeightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uwy-oU-ebx"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-rJ-C0E">
                                         <rect key="frame" x="0.0" y="797" width="388" height="51"/>
@@ -108,6 +114,10 @@
                             <constraint firstItem="hzb-0n-fbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="don-Fo-aSp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="HeightLabel" destination="3Ib-An-Ge4" id="bij-9p-DvC"/>
+                        <outlet property="WeightLabel" destination="gKz-6K-I8h" id="dVK-ur-6Iz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
