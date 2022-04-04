@@ -17,17 +17,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var HeightLabel: UILabel!
     @IBOutlet weak var WeightLabel: UILabel!
     
+    @IBOutlet weak var heightslider: UISlider!
+    @IBOutlet weak var weightslider: UISlider!
+    
     
     @IBAction func HeightChanged(_ sender: UISlider) {
         let heightdata = String(format: "%.2f", sender.value)
-        HeightLabel.text = heightdata
+        HeightLabel.text = "\(heightdata)m"
+      
     }
     
     @IBAction func WeightChanged(_ sender: UISlider) {
-        WeightLabel.text = String(sender.value)
+        let weightdata  = String(sender.value)
+        
+        WeightLabel.text = "\(weightdata)Kg"
     
     }
     
     
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        
+        let heightdata = heightslider.value
+        let weightdata = weightslider.value
+        let bmi = weightdata / heightdata * heightdata
+        
+        print(bmi)
+    }
 }
 
