@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var bmiValue = "0.0"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,9 +40,21 @@ class ViewController: UIViewController {
         
         let heightdata = heightslider.value
         let weightdata = weightslider.value
-        let bmi = weightdata / heightdata * heightdata
+        let bmi = weightdata/(heightdata * heightdata)
         
-        print(bmi)
+        bmiValue = String(format: "%.1f", bmi)
+   
+        self.performSegue(withIdentifier: "gotoResult", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "gotoResult" {
+     //       let destinationVC  = segue.destination as! SecondViewController
+        //    destinationVC.bmiValue = bmiValue
+            
+        }
     }
 }
 
