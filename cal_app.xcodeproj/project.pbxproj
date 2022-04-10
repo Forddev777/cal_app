@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA08493F2803525F007A551F /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA08493E2803525F007A551F /* CalculatorBrain.swift */; };
 		AA28B8782802DDEF0072F838 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA28B8772802DDEF0072F838 /* TwoViewController.swift */; };
 		AAA0A32F27F7585900774C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0A32E27F7585900774C7D /* AppDelegate.swift */; };
 		AAA0A33127F7585900774C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0A33027F7585900774C7D /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA08493E2803525F007A551F /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		AA28B8772802DDEF0072F838 /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		AAA0A32B27F7585900774C7D /* cal_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cal_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA0A32E27F7585900774C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA08493D28035235007A551F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA08493E2803525F007A551F /* CalculatorBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AAA0A32227F7585900774C7D = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		AAA0A32D27F7585900774C7D /* cal_app */ = {
 			isa = PBXGroup;
 			children = (
+				AA08493D28035235007A551F /* Model */,
 				AAA0A32E27F7585900774C7D /* AppDelegate.swift */,
 				AAA0A33027F7585900774C7D /* SceneDelegate.swift */,
 				AAFE954228009227006CD89A /* Controllers */,
@@ -160,6 +171,7 @@
 				AA28B8782802DDEF0072F838 /* TwoViewController.swift in Sources */,
 				AAA0A33327F7585900774C7D /* ViewController.swift in Sources */,
 				AAA0A32F27F7585900774C7D /* AppDelegate.swift in Sources */,
+				AA08493F2803525F007A551F /* CalculatorBrain.swift in Sources */,
 				AAA0A33127F7585900774C7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
