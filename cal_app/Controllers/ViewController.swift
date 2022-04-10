@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var bmiValue = "0.0"
+    var bmiValue = "0"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,36 +25,27 @@ class ViewController: UIViewController {
     @IBAction func HeightChanged(_ sender: UISlider) {
         let heightdata = String(format: "%.2f", sender.value)
         HeightLabel.text = "\(heightdata)m"
-      
     }
-    
     @IBAction func WeightChanged(_ sender: UISlider) {
-        let weightdata  = String(sender.value)
-        
+        let weightdata  = String(format: "%.0f", sender.value)
         WeightLabel.text = "\(weightdata)Kg"
-    
     }
-    
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        
         let heightdata = heightslider.value
         let weightdata = weightslider.value
-        let bmi = weightdata/(heightdata * heightdata)
-        
+        let bmi = weightdata / (heightdata * heightdata)
         bmiValue = String(format: "%.1f", bmi)
-   
-        self.performSegue(withIdentifier: "gotoResult", sender: self)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        print(bmiValue + " calculatePressed")
+        performSegue(withIdentifier: "gotoResult", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoResult" {
-     //       let destinationVC  = segue.destination as! SecondViewController
-        //    destinationVC.bmiValue = bmiValue
-            
+     
+            let dataVC = segue.destination as! TwoViewController
+                dataVC.bmiValue = bmiValue
+         
         }
     }
 }
-

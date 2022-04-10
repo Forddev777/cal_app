@@ -8,7 +8,7 @@ import UIKit
  
 class SecondViewController: UIViewController {
     
-    //var bmiValue = String?
+    var bmiValue =  String?
    
     @IBOutlet weak var bmiLable: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  bmiLable.text = bmiValue
+      bmiLable.text = bmiValue
        
     }
     
