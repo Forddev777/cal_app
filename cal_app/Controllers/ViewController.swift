@@ -41,10 +41,10 @@ class ViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoResult" {
-     
             let dataVC = segue.destination as! TwoViewController
-              
-            dataVC.bmiValue = calculatorBrain.getBMIValue()
+                dataVC.bmiValue = calculatorBrain.getBMIValue()
+                dataVC.advice = calculatorBrain.getAdvice()
+                dataVC.color = calculatorBrain.getColor()
             
         }
     }
